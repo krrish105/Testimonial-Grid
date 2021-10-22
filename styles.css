@@ -87,7 +87,7 @@ body{
   background-color: hsl(0, 0%, 100%);
 }
 
-/* media queries */
+/*media queries */
 @media (min-width: 770px) /*and (max-width: 1140px)*/ {
   .grid{
     grid-template-columns: auto auto;
