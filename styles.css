@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 1.3rem;
+}
+
+/* grid */
+.grid{
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 25px;
+  justify-content: center;
+  grid-auto-flow: row;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.info{
+  padding: 8px;
+  display: flex;
+}
+.logo{
+  margin-right: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.review{
+  padding-top: 0px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container{
+  border-radius: 5px;
+  /* min-height: 100px; */
+  padding: 10px;
+  box-shadow: 5px 5px hsl(0,0%,81%);
+}
+.top-para{
+  margin-bottom: 5px;
+}
+.person-name, .top-para{
+  font-weight: 600;
+}
+.person-work, .bottom-para{
+  font-weight: 500;
+}
+.person-work{
+  opacity: 50%;
+}
+.bottom-para{
+  opacity: 70%;
+}
+#person1{
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 81%);
+  max-width: 600px;
+}
+#person2{
+  background-color:hsl(217, 19%, 35%);
+  color: white;
+  max-width: 600px;
+}
+#person3{
+  background-color: hsl(0, 0%, 100%);
+}
+#person2 .review, #person4 .review{
+  color: hsl(0, 0%, 81%);
+}
+#person3 .review, #person5 .review{
+  color: hsl(217, 19%, 35%);
+}
+#person4{
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+}
+#person5{
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* media queries */
+@media (min-width: 770px) /*and (max-width: 1140px)*/ {
+  .grid{
+    grid-template-columns: auto auto;
+    margin-left: 150px
+  }
+  #person1{
+    width: 400px;
+    order: 1;
+  }
+  #person2{
+    width: 280px;
+    order: 3;
+  }
+  #person3{
+    width: 305px;
+    order: 2;
+    position: relative;
+    right: -5px;
+  }
+  #person4{
+    width: 430px;
+    order: 4;
+    position: relative;
+    left: -115px;
+  }
+  #person5{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 740px;
+    order: 5;
+  }
+}
+@media (min-width: 1020px)  {
+  #person1{
+    order: 1;
+  }
+  #person2{
+    order: 2;
+    width: 315px;
+  }
+  #person3{
+    order: 3;
+    width: 280px;
+  }
+  #person4{
+    order: 4;
+  }
+  #person5{
+    order: 5;
+  }
+}
